@@ -231,29 +231,7 @@ def plot_transactions(current_account):
     plt.show() #calls graph window
 
 #option menu function
-def main():
-    """
-    Shows option menu to user using buttonbox
-    """
-    current_account = None
-    while True:
-        choice = buttonbox("Select an option:", "Bank Account Simulator", options) #content, title, buttons
-        if choice == "Create/Login Account": #check age and create new account
-            check_age()
-            current_account = create_or_login_account(current_account)
-        elif choice == "Check Balance": #check balance
-            check_balance(current_account)
-        elif choice == "Deposit": #deposit
-            deposit(current_account)
-        elif choice == "Withdraw": #withdraw
-            withdraw(current_account)
-        elif choice == "Show Transaction History": #transaction history
-            show_history(current_account)
-        elif choice == "Show Transaction Graph": #transactions graph
-            plot_transactions(current_account)
-        elif choice == "Exit": #exit
-            msgbox("Exiting...", "Exit")
-            break
+
 
 #calling function
 main()
