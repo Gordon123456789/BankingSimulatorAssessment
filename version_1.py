@@ -96,6 +96,7 @@ def show_history():
         print(transaction)
     print(f"Your current balance is: ${balance}\n") #tells user balance after transaction list
 
+
 def main():
     print("\n----------------------------------------") #divider
     while True:
