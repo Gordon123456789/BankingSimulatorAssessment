@@ -85,7 +85,7 @@ def withdraw():
             print("\n----------------------------------------\n") #divider
     except ValueError:
         print("Invalid input.")
-        
+
 def show_history():
     print("\n----------------------------------------\n") #divider
     if account_created == 1: #checks if user has not created an account
@@ -95,7 +95,6 @@ def show_history():
     for transaction in transactions: #prints each transaction user has made from transactions list
         print(transaction)
     print(f"Your current balance is: ${balance}\n") #tells user balance after transaction list
-
 
 def main():
     print("\n----------------------------------------") #divider
