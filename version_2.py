@@ -23,7 +23,19 @@ accounts = {}
 #Tracks the account users currently logged into
 current_account = None
 
-
+#check users age eligibility
+def check_age():
+    while True:
+        try:
+            user_age = int(input("Enter your age (years): ")) #prompts user to input age
+            if user_age <= 12:
+                print("You need to be 13 years old or over\nExiting...")
+                exit()
+        except ValueError: #user enters non-integer
+            print("Please enter integers only")
+        else: 
+          print("You are old enough to use the simulator")
+          break
           
 #login or create a new account function
 def create_or_login_account():
