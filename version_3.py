@@ -146,28 +146,6 @@ def show_history():
         print(transaction) #prints each transaction from dictionary
     print(f"Current balance: ${accounts[current_account]['balance']}") #prints current balance for account logged into from dictionary
 
-#Plot the balance over time on a graph function
-def plot_transactions():
-    if current_account is None: #checks if user has not made account
-        print("Log in first.")
-        return
-
-    transaction_amounts = accounts[current_account]["transactions_numbers"]
-    starting_balance = accounts[current_account]["balance"] - sum(transaction_amounts) #calculates original balance
-    running_balance = [starting_balance] 
-
-    for amount in transaction_amounts: #calculates every change made from starting balance
-        running_balance.append(running_balance[-1] + amount) 
-
-    #sets graph features in matplotlib
-    plt.figure(figsize=(10, 5))
-    plt.plot(running_balance)
-    plt.grid(True)
-    plt.title(f"Transaction History for {current_account}")
-    plt.xlabel("Transaction Number")
-    plt.ylabel("Balance ($)")
-    plt.tight_layout()
-    plt.show()
 
 #Main menu function
 def main(): 
